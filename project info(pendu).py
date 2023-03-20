@@ -26,3 +26,35 @@ def afficher_mot_cache(mot, lettres_trouvees):
         else:
             mot_cache += "_"
     return mot_cache
+
+import random
+
+liste_de_mot = ['boule', 'noisette', 'vache', 'secret', 'sauterelle', 'feu', "hippocampe"]
+solution = random.choice(liste_de_mot)
+
+
+affichage=""
+a=(len(solution))
+i=0
+while a>=i:
+    affichage+="_"
+    i+=1
+print(affichage)
+
+tentative=8
+
+while tentative >= 0:
+    proposition = input("entrer une lettre: ")
+    x = proposition.isalpha()
+    if len(proposition) <= 1 and x == True:
+          break
+    else:
+          print("erreur, recommencer")
+
+lettre=""
+while tentative >= 0:
+     if proposition not in solution:
+          tentative -= 1
+          print(tentative)
+          if proposition in solution:
+              break
