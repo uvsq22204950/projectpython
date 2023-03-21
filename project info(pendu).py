@@ -6,7 +6,6 @@ fenetre = tk.Tk()
 fenetre.title("Jeu du pendu")
 label = tk.Label(fenetre, text="Bienvenue dans le jeu du pendu", font=("helvetica", "20")) # création du widget
 label.grid() # positionnement du widget
-fenetre.mainloop()#lancé la boucle pour pouvoir avoir la fenfetre
 
 # Définir la liste de mots pour le jeu
 liste_mots = ["correction", "opportuniste", "ascenseur", "evrest", "situation", "saturation", "programmeur","aviateur","musicien"]
@@ -79,3 +78,4 @@ while tentative >= 0 and "_" in affichage:
 
 print(lettre) 
 print("le mot est", affichage)
+fenetre.mainloop()#lancement de la fenetre
