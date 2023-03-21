@@ -4,6 +4,10 @@ import random
 # Initialiser la fenêtre Tkinter
 fenetre = tk.Tk()
 fenetre.title("Jeu du pendu")
+label = tk.Label(fenetre, text="Bienvenue dans le jeu du pendu", font=("helvetica", "20")) # création du widget
+label.grid() # positionnement du widget
+fenetre.geometry(500*500) #test de grandeur fenetre mais cela ne marche pas
+fenetre.mainloop()#lancé la boucle pour pouvoir avoir la fenfetre
 
 # Définir la liste de mots pour le jeu
 liste_mots = ["correction", "opportuniste", "ascenseur", "evrest", "situation", "saturation", "programmeur","aviateur","musicien"]
