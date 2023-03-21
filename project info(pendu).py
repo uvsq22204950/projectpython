@@ -45,6 +45,7 @@ while a >= i:
     i += 1
 print(affichage)
 
+#fonctoin qui dit si la lettre est bonne si erreur essai-1 si bon dit que la lettre est bonne faut juste essaiyer de la placer sur l'interface
 lettre = []
 mauvaises_lettre = []
 bonnes_lettres = []
