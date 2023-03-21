@@ -31,7 +31,7 @@ def afficher_mot_cache(mot, lettres_trouvees):
  
 import random
 
-liste_de_mot = ['boule']
+liste_de_mot = ['correction', 'opportuniste', 'ascenseur', 'evrest', 'situation', 'saturation', 'programmeur','aviateur','musicien']
 solution = random.choice(liste_de_mot)
 
 tentative=8
