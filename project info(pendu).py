@@ -10,6 +10,12 @@ label.grid() # positionnement du widget
 # Définir la liste de mots pour le jeu
 liste_mots = ["correction", "opportuniste", "ascenseur", "evrest", "situation", "saturation", "programmeur","aviateur","musicien"]
 
+# choisir un mots sur internet (a complété)
+from bs4 import BeautifulSoup
+from urllib.request import urlopen
+html= urlopen("http://www.google.com")
+bsObj = BeautifulSoup(html) 
+
 # Choisir un mot aléatoire de la liste
 mot_a_deviner = random.choice(liste_mots)
 
