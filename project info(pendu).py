@@ -6,16 +6,17 @@ fenetre = tk.Tk()
 fenetre.title("Jeu du pendu")
 label = tk.Label(fenetre, text="Bienvenue dans le jeu du pendu", font=("helvetica", "20")) # création du widget
 label.grid() # positionnement du widget
-
+def mots :
 # Définir la liste de mots pour le jeu
 liste_mots = ["correction", "opportuniste", "ascenseur", "evrest", "situation", "saturation", "programmeur","aviateur","musicien"]
- 
+ brek
 
 # Choisir un mot aléatoire de la liste
 mot_a_deviner = random.choice(liste_mots)
 
 # Initialiser les variables du jeu
-score = 0
+score = 0 
+def rechers :
 lettres_trouvees = []
 lettres_manquees = []
 nb_essais = 9
@@ -63,7 +64,8 @@ while tentative >= 0 and "_" in affichage:
         
             elif proposition in solution:
                 affichage += proposition 
-     if tentative < 8 
+     if tentative < 8
+     break 
       score += 1
     
 
@@ -81,7 +83,7 @@ fenetre.mainloop()#lancement de la fenetre
 def afficher_message(message):
     message_lbl.configure(text=message)
     message_lbl.pack()
-
+ def : pendue
 # Créer la fenêtre principale
 fenetre = Tk()
 fenetre.title("Jeu du pendu")
@@ -110,6 +112,13 @@ fenetre.title("Jeu du pendu")
         canvas.itemconfigure(left_eye, extent=270, style='arc')
         canvas.itemconfigure(right_eye, extent=270, style='arc')
         canvas.move(mouth, 0, 20)ache
+  def jeu : 
+   score = 0
+   mots 
+   rechere 
+   pendu 
+   ruturen scorre += 1
+   
 # source 
 # https://github.com/codingglitch/PenduTkinter/blob/main/pendu.py
 #https://www.mathweb.fr/euclide/2020/09/07/le-jeu-du-pendu-en-python/
