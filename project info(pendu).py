@@ -67,7 +67,22 @@ while tentative >= 0 and "_" in affichage:
 print(lettre) 
 print("le mot est", affichage)
 fenetre.mainloop()#lancement de la fenetre 
-def maj_affichage():
+
+    # Afficher les lettres correctes et incorrectes
+    lettres_correctes_lbl.configure(text="Lettres correctes: " + ", ".join(lettres_correctes))
+    lettres_incorrectes_lbl.configure(text="Lettres incorrectes: " + ", ".join(lettres_incorrectes))
+    # Afficher les lettres du mot cachées ou dévoilées
+    mot_lbl.configure(text="Mot: " + " ".join(l if l in lettres_correctes else "_" for l in mot))
+
+# Fonction pour afficher un message de fin de jeu
+def afficher_message(message):
+    message_lbl.configure(text=message)
+    message_lbl.pack()
+
+# Créer la fenêtre principale
+fenetre = Tk()
+fenetre.title("Jeu du pendu")
+    return mot_cdef maj_affichage():
     # Effacer le canevas et redessiner le pendu
     canevas.delete("all")
     if erreurs > 0:
@@ -91,19 +106,4 @@ def maj_affichage():
        # Modifier le visage pour le rendre triste
         canvas.itemconfigure(left_eye, extent=270, style='arc')
         canvas.itemconfigure(right_eye, extent=270, style='arc')
-        canvas.move(mouth, 0, 20)
-    # Afficher les lettres correctes et incorrectes
-    lettres_correctes_lbl.configure(text="Lettres correctes: " + ", ".join(lettres_correctes))
-    lettres_incorrectes_lbl.configure(text="Lettres incorrectes: " + ", ".join(lettres_incorrectes))
-    # Afficher les lettres du mot cachées ou dévoilées
-    mot_lbl.configure(text="Mot: " + " ".join(l if l in lettres_correctes else "_" for l in mot))
-
-# Fonction pour afficher un message de fin de jeu
-def afficher_message(message):
-    message_lbl.configure(text=message)
-    message_lbl.pack()
-
-# Créer la fenêtre principale
-fenetre = Tk()
-fenetre.title("Jeu du pendu")
-    return mot_cache
+        canvas.move(mouth, 0, 20)ache
