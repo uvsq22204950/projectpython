@@ -107,3 +107,8 @@ fenetre.title("Jeu du pendu")
         canvas.itemconfigure(left_eye, extent=270, style='arc')
         canvas.itemconfigure(right_eye, extent=270, style='arc')
         canvas.move(mouth, 0, 20)ache
+# source 
+# https://github.com/codingglitch/PenduTkinter/blob/main/pendu.py
+#https://www.mathweb.fr/euclide/2020/09/07/le-jeu-du-pendu-en-python/
+# https://lesbricodeurs.fr/articles/jeu-du-pendu-python/
+# chat gpt (annalyse fonctionel)
