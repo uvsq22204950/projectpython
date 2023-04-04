@@ -85,19 +85,19 @@ fenetre.title("Jeu du pendu")
     return mot_cdef maj_affichage():
     # Effacer le canevas et redessiner le pendu
     canevas.delete("all")
-    if erreurs > 0:
+    if tentative > 0:
         canevas.create_line(20, 180, 100, 180)
-    if erreurs > 1:
+    if tentative > 1:
         canevas.create_line(60, 180, 60, 20)
-    if erreurs > 2:
+    if tentative > 2:
         canevas.create_line(60, 20, 150, 20)
-    if erreurs > 3:
+    if tentative > 3:
         canevas.create_line(150, 20, 150, 40)
-    if erreurs > 4:
+    if tentative > 4:
         canevas.create_oval(135, 40, 165, 70)
-    if erreurs > 5:
+    if tentative > 5:
         canevas.create_line(150, 70, 150, 110)
-     if erreurs > 6:
+     if tentative > 6:
        face = canvas.create_oval(50, 50, 250, 250, width=2, outline='black')
        left_eye = canvas.create_oval(90, 100, 130, 140, fill='white', outline='black')
        right_eye = canvas.create_oval(170, 100, 210, 140, fill='white', outline='black')
