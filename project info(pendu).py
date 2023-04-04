@@ -15,6 +15,7 @@ liste_mots = ["correction", "opportuniste", "ascenseur", "evrest", "situation", 
 mot_a_deviner = random.choice(liste_mots)
 
 # Initialiser les variables du jeu
+score = 0
 lettres_trouvees = []
 lettres_manquees = []
 nb_essais = 9
@@ -62,6 +63,8 @@ while tentative >= 0 and "_" in affichage:
         
             elif proposition in solution:
                 affichage += proposition 
+     if tentative < 8 
+      score += 1
     
 
 print(lettre) 
