@@ -9,12 +9,7 @@ label.grid() # positionnement du widget
 
 # Définir la liste de mots pour le jeu
 liste_mots = ["correction", "opportuniste", "ascenseur", "evrest", "situation", "saturation", "programmeur","aviateur","musicien"]
-
-# choisir un mots sur internet (a complété)
-from bs4 import BeautifulSoup
-from urllib.request import urlopen
-html= urlopen("http://www.google.com")
-bsObj = BeautifulSoup(html) 
+ 
 
 # Choisir un mot aléatoire de la liste
 mot_a_deviner = random.choice(liste_mots)
@@ -87,6 +82,16 @@ def maj_affichage():
         canevas.create_oval(135, 40, 165, 70)
     if erreurs > 5:
         canevas.create_line(150, 70, 150, 110)
+     if erreurs > 6:
+       face = canvas.create_oval(50, 50, 250, 250, width=2, outline='black')
+       left_eye = canvas.create_oval(90, 100, 130, 140, fill='white', outline='black')
+       right_eye = canvas.create_oval(170, 100, 210, 140, fill='white', outline='black')
+       mouth = canvas.create_arc(90, 150, 210, 230, start=30, extent=120, style='arc', width=2)
+
+       # Modifier le visage pour le rendre triste
+        canvas.itemconfigure(left_eye, extent=270, style='arc')
+        canvas.itemconfigure(right_eye, extent=270, style='arc')
+        canvas.move(mouth, 0, 20)
     # Afficher les lettres correctes et incorrectes
     lettres_correctes_lbl.configure(text="Lettres correctes: " + ", ".join(lettres_correctes))
     lettres_incorrectes_lbl.configure(text="Lettres incorrectes: " + ", ".join(lettres_incorrectes))
