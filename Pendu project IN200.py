@@ -86,13 +86,13 @@ label_T.grid(row=20,column=600)
 entry_letter = tk.Entry(root, width=2, font=("Helvetica", 30), justify= CENTER)
 entry_letter.grid(row=20,column=700)
 
-bouton_V= tk.Button(root, text="valider", command=lambda : valider(any))
+bouton_V= tk.Button(root, text="valider", bg="green", relief="groove", borderwidth=5, command=lambda : valider(any))
 bouton_V.grid(row=20,column=1000)
 
-ButtonI = tk.Button(root, width=8, height=1, text="indication", command=indication)
+ButtonI = tk.Button(root, width=8, height=1, bg="grey", relief="groove", borderwidth=5, text="indication", command=indication)
 ButtonI.grid(row=0, column=700)
 
-ButtonA = tk.Button(root, width=5, height=1, text="aide", command=aide)
+ButtonA = tk.Button(root, width=5, height=1, bg="red", relief="groove", borderwidth=5, text="aide", command=aide)
 ButtonA.grid(row=0, column=1000)
 
 
