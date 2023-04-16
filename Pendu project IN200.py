@@ -5,8 +5,7 @@ import random
 import copy
 
 frequence = ["e", "s", "a", "r", "t", "i", "n", "u", "l", "o", "d", "c", "j", "b", "m", "p", "v", "q", "f", "g", "h", "x", "y", "z", "w", "k" ]
-mot = 'boulet'
-liste_de_mot = [mot]
+liste_de_mot = ["doublure","plongeur","prisonnier","ivoire","juteux","gencives","incliner","toast","sommeil","fondre","cadeau","mot","blouse","nourriture","saison","contagieux","cognitif","condamne","ennui","goutte","albinos","claustrophobie","lame","python","descente","construction","masseuse","guerison","suicide","lyncher","valise","meurtrier","pyjamas","extension","harpon","phylogenetique","fourmi","siamois"]
 tentative=8
 
 solution = random.choice(liste_de_mot)
@@ -56,16 +55,16 @@ def valider(event):
                 label_tab[i].config(text=str(proposition))
                 affichage.pop()
 
-        if proposition not in mot:
+        if proposition not in solution :
             mauvaises_lettres += [proposition]
             label_F.config(text="mauvaises lettres: " + str(mauvaises_lettres))
             tentative -= 1
             label_T.config(text="tentatives restantes: " + str(tentative))
         if tentative <= 0:
-            tkinter.messagebox.showinfo("GAME OVER", "le mot est " + mot)
+            tkinter.messagebox.showinfo("GAME OVER", "le mot est " + solution)
             root.destroy()
         elif "_" not in affichage:
-            tkinter.messagebox.showinfo("CONGRATULATIONS", "le mot est " + mot)
+            tkinter.messagebox.showinfo("CONGRATULATIONS", "le mot est " + solution)
             root.destroy()
 root = tk.Tk()
 root.title("PENDU")
