@@ -98,3 +98,7 @@ ButtonA.grid(row=0, column=1000)
 root.bind("<Button-3>",valider)
 
 root.mainloop()
+def parti ():
+    scorre = 0
+    aide
+    indication
