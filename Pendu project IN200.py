@@ -95,7 +95,7 @@ ButtonA = tk.Button(root, width=5, height=1, bg="red", relief="groove", borderwi
 ButtonA.grid(row=0, column=1000)
 
 
-root.bind("<Button-3>",valider)
+root.bind("<Return>",valider) # cliquer sur entré pour valider
 
 root.mainloop()
 
