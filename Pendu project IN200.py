@@ -102,4 +102,26 @@ root.mainloop()
 def scorre():
     scorre = 0
     if tentative < 8 
-    scorre +=1
+    scorre +=1 
+ def bonhome_pendu:
+    if tentative > 0:
+        canevas.create_line(20, 180, 100, 180)
+    if tentative > 1 :
+        canevas.create_line(60, 180, 60, 20)
+    if tentative > 2 :
+        canevas.create_line(60, 20, 150, 20)
+    if tentative > 3 :
+        canevas.create_line(150, 20, 150, 40)
+    if tentative > 4 :
+        canevas.create_oval(135, 40, 165, 70)
+    if tentative > 5 :
+        canevas.create_line(150, 70, 150, 110)
+     if tentative > 6 :
+       face = canvas.create_oval(50, 50, 250, 250, width=2, outline='black')
+       left_eye = canvas.create_oval(90, 100, 130, 140, fill='white', outline='black')
+       right_eye = canvas.create_oval(170, 100, 210, 140, fill='white', outline='black')
+       mouth = canvas.create_arc(90, 150, 210, 230, start=30, extent=120, style='arc', width=2)
+      if tentative > 7 :
+        canvas.itemconfigure(left_eye, extent=270, style='arc')
+        canvas.itemconfigure(right_eye, extent=270, style='arc')
+        canvas.move(mouth, 0, 20)ache
