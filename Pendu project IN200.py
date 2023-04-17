@@ -4,9 +4,17 @@ import tkinter.messagebox
 import random
 import copy
 
+
+    
 frequence = ["e", "s", "a", "r", "t", "i", "n", "u", "l", "o", "d", "c", "j", "b", "m", "p", "v", "q", "f", "g", "h", "x", "y", "z", "w", "k" ]
 liste_de_mot = ["doublure","plongeur","prisonnier","ivoire","juteux","gencives","incliner","toast","sommeil","fondre","cadeau","mot","blouse","nourriture","saison","contagieux","cognitif","condamne","ennui","goutte","albinos","claustrophobie","lame","python","descente","construction","masseuse","guerison","suicide","lyncher","valise","meurtrier","pyjamas","extension","harpon","phylogenetique","fourmi","siamois"]# liste de mots
 tentative=8
+    scores = {}
+try:
+    with open("scores.json", "r") as f:
+        scores = json.load(f)
+except FileNotFoundError:
+    pass
 
 solution = random.choice(liste_de_mot)
 mot_tab=[]
@@ -103,7 +111,7 @@ def scorre():
     scorre = 0
     if tentative < 8 
     scorre +=1 
- def bonhome_pendu:
+ def bonhome_pendu():
     if tentative > 0:
         canevas.create_line(20, 180, 100, 180)
     if tentative > 1 :
@@ -125,3 +133,10 @@ def scorre():
         canvas.itemconfigure(left_eye, extent=270, style='arc')
         canvas.itemconfigure(right_eye, extent=270, style='arc')
         canvas.move(mouth, 0, 20)ache
+        
+        def sauvegarder_score(tentavie):
+            if tentative < 8
+                victoire += 1
+        if nom not in scores:
+            scores[nom] = {"victoires": victoire }
+        with open("scores.json", "w")
