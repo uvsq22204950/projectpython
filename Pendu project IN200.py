@@ -93,6 +93,8 @@ ButtonI.grid(row=0, column=700)
 
 ButtonA = tk.Button(root, width=5, height=1, bg="red", relief="groove", borderwidth=5, text="aide", command=aide)
 ButtonA.grid(row=0, column=1000)
+boutonR = tk.Button(root, text = "Rejouer", width = 7, height = 1, relief = "groove", bg="blue")
+boutonR.grid(row=0, column=650)
 
 
 root.bind("<Return>",valider) # cliquer sur entré pour valider
