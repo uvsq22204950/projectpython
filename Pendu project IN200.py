@@ -7,28 +7,28 @@ import copy
 frequence = ["e", "s", "a", "r", "t", "i", "n", "u", "l", "o", "d", "c", "j", "b", "m", "p", "v", "q", "f", "g", "h", "x", "y", "z", "w", "k" ]
 liste_de_mot = ["doublure","plongeur","prisonnier","ivoire","juteux","gencives","incliner","toast","sommeil","fondre","cadeau","mot","blouse","nourriture","saison","contagieux","cognitif","condamne","ennui","goutte","albinos","claustrophobie","lame","python","descente","construction","masseuse","guerison","suicide","lyncher","valise","meurtrier","pyjamas","extension","harpon","phylogenetique","fourmi","siamois"]# liste de mots
 
-solution = random.choice(liste_de_mot)
+solution = random.choice(liste_de_mot) #celection du mot caché dans la liste de mots préalablement définie
 mot_tab=[]
 for i in solution:
     mot_tab.append(i)
-
+#definnition variables
 mauvaises_lettres = []
 bonnes_lettres = []
 tentative = 9
 affichage=[]
-for i in range(len(mot_tab)):
+for i in range(len(mot_tab)):#met le nombre de lettre du mot en étoile dans la fenetre
     affichage.append("*")
 
-def indication():
+def indication(): #donne une lettre qui a un haut to de fréquance dans la langue française
     entry_letter.delete(0,tk.END)
     entry_letter.insert(0,frequence[0])
 
-def aide():
+def aide(): #fonction aide qui nous donne les règles
     aides =tk.Tk()
     label = tk.Label(aides, text="Le but du jeu est simple : deviner toutes les lettres qui doivent composer un mot, éventuellement avec un nombre limité de tentatives et des thèmes fixés à l'avance.\n" + "A chaque fois que le joueur devine une lettre, celle-ci est affichée. Dans le cas contraire, le dessin d'un pendu se met à apparaître", font=("Helvetica", 9))
     label.pack()
     aides.mainloop()
-
+#fonction qui s'occupe de gerer comment le jeu fonctionne le nb de lettre les proposition si c deja proposé si c gagné ou non
 def valider(event):
     global bonnes_lettres
     global mauvaises_lettres
@@ -54,7 +54,7 @@ def valider(event):
                 label_tab[i].config(text=str(proposition))
                 affichage.pop()
 
-        if proposition not in solution :
+        if proposition not in solution :#pour les tentative et la victoire
             mauvaises_lettres += [proposition]
             label_F.config(text="mauvaises lettres: " + str(mauvaises_lettres))
             tentative -= 1
@@ -84,7 +84,7 @@ label_T.grid(row=20,column=600)
 
 entry_letter = tk.Entry(root, width=2, font=("Helvetica", 30), justify= CENTER)
 entry_letter.grid(row=20,column=700)
-
+#programmation des boutons de tout les boutons
 bouton_V= tk.Button(root, text="valider", bg="green", relief="groove", borderwidth=5, command=lambda : valider(any))
 bouton_V.grid(row=20,column=1000)
 
@@ -99,7 +99,7 @@ boutonR.grid(row=0, column=650)
 canvas = tk.Canvas(root, bg="black", height=600, width=900)
 canvas.grid(row= 600, column=1400)
 
-def dessin():
+def dessin():  #affichage du pendu en fonction des tentavives restante
     barres = []
     if tentative <=0:
         barres.append(canvas.create_line((220, 260), (180, 280), (220, 260), (260, 280), fill="white", width=3))
@@ -125,24 +125,4 @@ root.bind("<Return>",valider) # cliquer sur entré pour valider
 root.mainloop()
 
 
-
-
-
-
-
-
-
-
-
-
-def scorre():
-    scorre = 0
-    if tentative < 8 
-    scorre +=1 
-        scores = {}
-        def sauvegarder_score(victoire):
-            if tentative < 7:
-                scrore +=1
-            scores[nom] = {"victoires": scrore)
-         break
-                           
+              
