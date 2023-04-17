@@ -97,7 +97,26 @@ ButtonA.grid(row=0, column=1000)
 boutonR = tk.Button(root, text = "Rejouer", width = 7, height = 1, relief = "groove", bg="blue")
 boutonR.grid(row=0, column=650)
 
-ici catherine
+def dessin():
+    barres = []
+    if tentative <=0:
+        barres.append(canvas.create_line((220, 260), (180, 280), (220, 260), (260, 280), fill="white", width=3))
+    if tentative <=1:
+        barres.append(canvas.create_line((220, 210), (180, 230), (220, 210), (260, 230), fill="white", width=3))
+    if tentative <=2:
+        barres.append(canvas.create_line((220, 190), (220, 260), fill="white", width=3))
+    if tentative <=3:
+        barres.append(canvas.create_oval((200, 150), (240, 190), fill="black", outline= "white", width=3 ))
+    if tentative <=4 :
+        barres.append(canvas.create_line((220, 100), (220, 150), fill="white", width=5))
+    if tentative <=5 :
+        barres.append(canvas.create_line((20, 150), (50, 100), fill="white", width=5))
+    if tentative <= 6 :
+        barres.append(canvas.create_line((20, 100), (250, 100), fill="white", width=5))
+    if tentative <=7 :
+        barres.append(canvas.create_line((20, 98), (20, 353), fill="white", width=5))
+    if tentative <=8:
+        barres.append(canvas.create_line((20, 350), (200, 350), fill="white", width=5))
 
 root.bind("<Return>",valider) # cliquer sur entré pour valider
 
