@@ -64,7 +64,7 @@ def valider(event):
         if tentative <= 0:
             tkinter.messagebox.showinfo("GAME OVER", "le mot est " + solution)
             root.destroy()
-        elif "_" not in affichage:
+        elif "*" not in affichage:
             tkinter.messagebox.showinfo("CONGRATULATIONS", "le mot est " + solution)
             root.destroy()
 root = tk.Tk()
@@ -96,6 +96,9 @@ ButtonA = tk.Button(root, width=5, height=1, bg="red", relief="groove", borderwi
 ButtonA.grid(row=0, column=1000)
 boutonR = tk.Button(root, text = "Rejouer", width = 7, height = 1, relief = "groove", bg="blue")
 boutonR.grid(row=0, column=650)
+
+canvas = tk.Canvas(root, bg="black", height=600, width=900)
+canvas.grid(row= 600, column=1400)
 
 def dessin():
     barres = []
