@@ -120,7 +120,7 @@ def dessin():  #affichage du pendu en fonction des tentavives restante
     if tentative <=8:
         barres.append(canvas.create_line((20, 350), (200, 350), fill="white", width=5))
 
-root.bind("<Return>",valider) # cliquer sur entré pour valider
+root.bind("<Return>",valider) # cliquer sur entré pour valider # # La méthode bind() permet de lier un événement avec une fonction 
 
 root.mainloop()
 
