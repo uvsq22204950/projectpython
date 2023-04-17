@@ -124,4 +124,10 @@ def scorre():
       if tentative > 7 :
         canvas.itemconfigure(left_eye, extent=270, style='arc')
         canvas.itemconfigure(right_eye, extent=270, style='arc')
-        canvas.move(mouth, 0, 20)ache
+        canvas.move(mouth, 0, 20)ache 
+        scores = {}
+        def sauvegarder_score(victoire):
+            if tentative < 7:
+                scrore +=1
+            scores[nom] = {"victoires": scrore)
+         break
