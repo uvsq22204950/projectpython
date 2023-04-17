@@ -6,7 +6,6 @@ import copy
 
 frequence = ["e", "s", "a", "r", "t", "i", "n", "u", "l", "o", "d", "c", "j", "b", "m", "p", "v", "q", "f", "g", "h", "x", "y", "z", "w", "k" ]
 liste_de_mot = ["doublure","plongeur","prisonnier","ivoire","juteux","gencives","incliner","toast","sommeil","fondre","cadeau","mot","blouse","nourriture","saison","contagieux","cognitif","condamne","ennui","goutte","albinos","claustrophobie","lame","python","descente","construction","masseuse","guerison","suicide","lyncher","valise","meurtrier","pyjamas","extension","harpon","phylogenetique","fourmi","siamois"]# liste de mots
-tentative=8
 
 solution = random.choice(liste_de_mot)
 mot_tab=[]
@@ -15,7 +14,7 @@ for i in solution:
 
 mauvaises_lettres = []
 bonnes_lettres = []
-tentative = 8
+tentative = 9
 affichage=[]
 for i in range(len(mot_tab)):
     affichage.append("*")
