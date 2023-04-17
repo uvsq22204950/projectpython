@@ -5,7 +5,7 @@ import random
 import copy
 
 frequence = ["e", "s", "a", "r", "t", "i", "n", "u", "l", "o", "d", "c", "j", "b", "m", "p", "v", "q", "f", "g", "h", "x", "y", "z", "w", "k" ]
-liste_de_mot = ["doublure","plongeur","prisonnier","ivoire","juteux","gencives","incliner","toast","sommeil","fondre","cadeau","mot","blouse","nourriture","saison","contagieux","cognitif","condamne","ennui","goutte","albinos","claustrophobie","lame","python","descente","construction","masseuse","guerison","suicide","lyncher","valise","meurtrier","pyjamas","extension","harpon","phylogenetique","fourmi","siamois"]# liste de mots
+liste_de_mot = ["doublure","plongeur","prisonnier","ivoire","juteux","gencives","incliner","toast","sommeil","fondre","cadeau","mot","blouse","nourriture","saison","contagieux","cognitif","condamne","ennui","goutte","albinos","claustrophobie","lame","python","descente","construction","masseuse","guerison","suicide","lyncher","valise","meurtrier","pyjamas","extension","harpon","phylogenetique","fourmi","siamois","ion","anion","cation","fourgonette","joie","bonheur","mongofier","liquide","solide","gazeux","aliteration","prosodit","renaisance","recommencer","phenix","metaphore","surmoi","astronaute","lune","soleile","blanc","creme","pluie","ciel","meteo","meteorite","gamette"]# liste de mots
 
 solution = random.choice(liste_de_mot) #celection du mot caché dans la liste de mots préalablement définie
 mot_tab=[]
