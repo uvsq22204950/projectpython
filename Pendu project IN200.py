@@ -18,7 +18,7 @@ bonnes_lettres = []
 tentative = 8
 affichage=[]
 for i in range(len(mot_tab)):
-    affichage.append("_")
+    affichage.append("*")
 
 def indication():
     entry_letter.delete(0,tk.END)
