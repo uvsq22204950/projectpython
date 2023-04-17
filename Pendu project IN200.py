@@ -72,7 +72,7 @@ root.title("PENDU")
 
 label_tab = []
 for i in range(len(mot_tab)):
-    label = tk.Label(root, text="_", font=("Helvetica", 30))
+    label = tk.Label(root, text="*", font=("Helvetica", 30))
     label.grid(row=2, column=i)
     label_tab.append(label)
 
