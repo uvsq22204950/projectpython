@@ -59,6 +59,7 @@ def valider(event):
             mauvaises_lettres += [proposition]
             label_F.config(text="mauvaises lettres: " + str(mauvaises_lettres))
             tentative -= 1
+            dessin()
             label_T.config(text="tentatives restantes: " + str(tentative))
         if tentative <= 0:
             tkinter.messagebox.showinfo("GAME OVER", "le mot est " + solution)
@@ -96,10 +97,22 @@ ButtonA.grid(row=0, column=1000)
 boutonR = tk.Button(root, text = "Rejouer", width = 7, height = 1, relief = "groove", bg="blue")
 boutonR.grid(row=0, column=650)
 
+ici catherine
 
 root.bind("<Return>",valider) # cliquer sur entré pour valider
 
 root.mainloop()
+
+
+
+
+
+
+
+
+
+
+
 
 def scorre():
     scorre = 0
