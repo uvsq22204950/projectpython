@@ -132,5 +132,3 @@ def scorre():
             scores[nom] = {"victoires": scrore)
          break
                            
-    # source 
-    # chat gpt (pour avoir une idée genérale du programe)
