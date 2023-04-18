@@ -62,10 +62,10 @@ def valider(event):
             label_True.config(text="tentatives restantes: " + str(tentative))
         if tentative <= 0:
             tkinter.messagebox.showinfo("GAME OVER", "le mot est " + solution)
-            root.destroy()
+            reset()
         elif "*" not in affichage:
             tkinter.messagebox.showinfo("CONGRATULATIONS", "le mot est " + solution)
-            root.destroy()
+            reset()
 root = tk.Tk()
 root.title("PENDU")
 
