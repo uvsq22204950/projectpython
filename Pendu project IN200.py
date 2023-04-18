@@ -94,8 +94,6 @@ ButtonI.grid(row=0, column=700)
 
 ButtonA = tk.Button(root, width=5, height=1, bg="red", relief="groove", borderwidth=5, text="aide", command=aide)
 ButtonA.grid(row=0, column=1000)
-boutonR = tk.Button(root, text = "Rejouer", width = 7, height = 1, relief = "groove", bg="blue")
-boutonR.grid(row=0, column=650)
 
 canvas = tk.Canvas(root, bg="black", height=600, width=900)
 canvas.grid(row= 600, column=1400)
@@ -122,6 +120,27 @@ def dessin():  #affichage du pendu en fonction des tentavives restante
         barres.append(canvas.create_line((20, 350), (200, 350), fill="white", width=5))
 
 root.bind("<Return>",valider) # cliquer sur entré pour valider # # La méthode bind() permet de lier un événement avec une fonction 
+
+def reset():
+    rejouer = tk.Tk()
+    rejouer.geometry("400x100")
+    rejouer.title("Fin")
+
+    def recommencer():
+        dessin.suppu
+        
+        
+    def quitter():
+        root.destroy()
+        rejouer.destroy()
+
+    Button_Recommencer = tk.Button(rejouer, width=10, height=3, bg="green", relief="groove", borderwidth=5, text="rejouer", command=recommencer)
+    Button_Recommencer.grid(row=400, column=1 )
+
+    Button_Quitter = tk.Button(rejouer, width=10, height=3, bg="red", relief="groove", borderwidth=5, text="quitter", command=quitter)
+    Button_Quitter.grid(row=400, column=100)
+
+    rejouer.mainloop()
 
 root.mainloop()
 
