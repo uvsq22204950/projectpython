@@ -90,7 +90,6 @@ label_Faux = tk.Label(root, text="")  # label mauvaises lettres
 label_Faux.grid(row=3,column=98)
 label_True = tk.Label(root, text="nombre de tentatives restantes: " + str(tentative))   # label tentative
 label_True.grid(row=20,column=600)
-label_True.grid(row=20,column=600)
 
 entry_letter = tk.Entry(root, width=2, font=("Helvetica", 30), justify= CENTER)   # texte écrit au centre de la case
 entry_letter.grid(row=20,column=700)
