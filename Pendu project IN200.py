@@ -86,14 +86,14 @@ label_True.grid(row=20,column=600)
 entry_letter = tk.Entry(root, width=2, font=("Helvetica", 30), justify= CENTER)   # texte écrit au centre de la case
 entry_letter.grid(row=20,column=700)
 #programmation des boutons de tout les boutons
-bouton_V= tk.Button(root, text="valider", bg="green", relief="groove", borderwidth=5, command=lambda : valider(any))   # lambda pour ajouter des paramètres/ any paramètre on met ce qu'on veut dedans
-bouton_V.grid(row=20,column=1000)
+bouton_Valider= tk.Button(root, text="valider", bg="green", relief="groove", borderwidth=5, command=lambda : valider(any))   # lambda pour ajouter des paramètres/ any paramètre on met ce qu'on veut dedans
+bouton_Valider.grid(row=20,column=1000)
 
-ButtonI = tk.Button(root, width=8, height=1, bg="grey", relief="groove", borderwidth=5, text="indication", command=indication)
-ButtonI.grid(row=0, column=700)
+Button_Indication = tk.Button(root, width=8, height=1, bg="grey", relief="groove", borderwidth=5, text="indication", command=indication)
+Button_Indication.grid(row=0, column=700)
 
-ButtonA = tk.Button(root, width=5, height=1, bg="red", relief="groove", borderwidth=5, text="aide", command=aide)
-ButtonA.grid(row=0, column=1000)
+Button_Aide = tk.Button(root, width=5, height=1, bg="red", relief="groove", borderwidth=5, text="aide", command=aide)
+Button_Aide.grid(row=0, column=1000)
 
 canvas = tk.Canvas(root, bg="black", height=600, width=900)
 canvas.grid(row= 600, column=1400)
