@@ -16,9 +16,18 @@ mauvaises_lettres = []
 bonnes_lettres = []
 tentative = 9
 affichage=[]
+L_Score = []
 for i in range(len(mot_tab)):#met le nombre de lettre du mot en étoile dans la fenetre
     affichage.append("*")
 
+def scores_1():
+   Scores=tk.Tk()
+   Scores.title("Score")
+   label_Score = tk.Label(Scores, font=("Helvetica", 9), text="ton score est de: " + str(tentative))
+   label_Score.pack()
+   Scores.mainloop()
+
+    
 def indication(): #donne une lettre qui a un haut to de fréquance dans la langue française
     entry_letter.delete(0,tk.END) # supprime l'intérieur de la case à écrire (de 0 jusqu'à la fin)
     entry_letter.insert(0,frequence[0])
@@ -95,6 +104,9 @@ Button_Indication.grid(row=0, column=700)
 Button_Aide = tk.Button(root, width=5, height=1, bg="red", relief="groove", borderwidth=5, text="aide", command=aide)
 Button_Aide.grid(row=0, column=1000)
 
+Button_Score= tk.Button(root, width=5, height=1, bg="blue", relief="groove", borderwidth=5, text="Score", command=scores_1)
+Button_Score.grid(row=2, column=1000)
+
 canvas = tk.Canvas(root, bg="black", height=600, width=900)
 canvas.grid(row= 600, column=1400)
 
@@ -127,7 +139,8 @@ def reset():
     rejouer.title("Fin")
 
     def recommencer():
-        dessin.suppu
+        L_Score.append(tentative)
+        root.destroy()
         
         
     def quitter():
